@@ -73,7 +73,7 @@ nav a:hover:not(.active) {
 
 img {
 	display: block;
-	width: 250px;
+	width: 230px;
 	text-align: center;
 	margin: 50px auto;
 }
@@ -81,7 +81,7 @@ img {
 .left {
 	display: inline-block;
 	float:left;
-	width: 300px;
+	width: 277px;
 	height: 100%;
 	background-color: #98DBC6;
 	margin-right: 10px;
