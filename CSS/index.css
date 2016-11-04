@@ -1,0 +1,94 @@
+body {
+	display: inline-block;
+	padding: 5px;
+	margin: 5px;
+	font-size: 20px;
+}
+
+header {
+	background-color: #98DBC6;
+	background-image: url("../IMG/cherry-blossom-cover.png");
+	background-size: 1000px 300px cover;
+	font-size: 20px;
+	font-family: Century Gothic, Nirmala UI;
+	margin: 0px;
+	padding: 5px 5px 0px 5px;
+	height: 290px;
+}
+
+h1 {
+	color: #FFF;
+	text-align: center;
+	font-size: 120%;
+}
+
+h2 {
+	color: #021C1E;
+	font-family: Nirmala UI, Book Antiqua;
+}
+
+p {
+	font-family: Nirmala UI, Book Antiqua;
+	font-size: 18px;
+}
+
+section {
+	background-color: #FFF;
+	margin: 0px;
+}
+
+a:link {
+	color: #014444;
+	text-decoration: none;
+}
+
+a:hover {
+	background-color: #98DBC6;
+}
+
+nav {
+	text-align: center;
+	opacity: 0.75;
+}
+
+nav a {
+	display: inline-block;
+	text-decoration: none;
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
+    color: #000;
+    padding: 8px 16px;
+    margin: 10px;
+}
+
+nav a.active {
+    background-color: #014444;
+    color: white;
+}
+
+nav a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+img {
+	display: block;
+	width: 250px;
+	text-align: center;
+	margin: 50px auto;
+}
+
+.left {
+	display: inline-block;
+	float:left;
+	width: 300px;
+	height: 100%;
+	background-color: #98DBC6;
+	margin-right: 10px;
+}
+
+.right {
+	overflow: auto;
+	background-color: #FFF;
+	height: 100vh;
+}
