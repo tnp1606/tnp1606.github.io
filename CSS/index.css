@@ -7,6 +7,7 @@ body {
 
 header {
 	background-color: #98DBC6;
+	background-repeat: no-repeat;
 	background-image: url("../IMG/cherry-blossom-cover.png");
 	background-size: 1000px 300px cover;
 	font-size: 20px;
@@ -17,8 +18,8 @@ header {
 }
 
 h1 {
-	color: #FFF;
-	text-align: center;
+	color: #000;
+	font-family: Nirmala UI, Book Antiqua;
 	font-size: 120%;
 }
 
@@ -29,7 +30,7 @@ h2 {
 
 p {
 	font-family: Nirmala UI, Book Antiqua;
-	font-size: 18px;
+	font-size: 15px;
 }
 
 section {
@@ -82,7 +83,6 @@ img {
 	display: inline-block;
 	float:left;
 	width: 277px;
-	height: 100%;
 	background-color: #98DBC6;
 	margin-right: 10px;
 }
@@ -90,5 +90,4 @@ img {
 .right {
 	overflow: auto;
 	background-color: #FFF;
-	height: 100vh;
 }
