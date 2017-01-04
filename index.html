@@ -1,37 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="author" content="Elise Tran Ngoc Phung">
-	<title>Tran Ngoc Phung - Work in progress</title>
-	<link rel="shortcut icon" href="IMG\TNP-sign.ico" />
-	<link rel="stylesheet" href="CSS/index.css">
-</head>
-<body>
-	<header>
-		<h1></h1>
-		<nav>
-			<a href="index.html" class = "active">Home</a>
-			<a href="web-dev.html">Web Design</a>
-			<a href="english.html">English</a>
-			<a href="http://elisetnp.wordpress.com" target="_blank">French</a>
-			<a href="http://linnarrowthegap.org" target="_blank">PR & Communications</a>
-		</nav>
-	</header>
-		<main>
-			<aside class = "left">
-			<img src="IMG/chii_1.png" alt="Chii looks">
-			<img src="IMG/chii_2.png" alt="Chii notices">
+    <meta name="description" content="Elise TNP - blog">
+    <meta name="author" content="Elise Tran Ngoc Phung">
+    <link rel="icon" href="img\TNP-sign.ico">
 
-		</aside>
-			<section class = "right">
-				<h2>So, I've learned to code (finally!) </h2>
-			<p>I started to learn about web design in late September. It's been merely 5 weeks but I've already fallen in love with it!</p>
-			<p>What I find much more entertaining is that it's not just how you play with coding, it's about designing, arranging and make them look visually attractive together. It's such a great feeling to see how your codes turn into something nice - and it can be nicer. :) 
-			</p>
-	</section>
-</main>
-</body>
+    <title>Elise Tran Ngoc Phung</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="https://tnp1606.github.io/">Elise Tran Ngoc Phung</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Ping me</a></li>
+                <!-- <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>-->
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <!--<li data-target="#myCarousel" data-slide-to="2"></li>-->
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        
+        <div class="item active">
+          <img class="first-slide" class="img-responsive" src="img/pexels-photo-70232.jpeg" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Tran Ngoc-Phung</h1>
+              <p>An explorer in Communications and IT. From Hochiminh City.</p>
+              <!--<p><a class="btn btn-lg btn-primary" href="#abt" role="button">Find out more</a></p>-->
+            </div>
+          </div>
+        </div>
+        
+        <div class="item">
+          <img class="second-slide" src="img/pexels-photo-185495.jpeg" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>My little corner</h1>
+              <p>I write. On and Off. Usually off.</p>
+              <p><a class="btn btn-lg btn-primary" href="https://elisetnp.wordpress.com/" role="button" target="_blank">See my (old) blog</a></p>
+            </div>
+          </div>
+        </div>
+        
+        <!--<div class="item">
+          <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>One more for good measure.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+            </div>
+          </div>
+        </div>-->
+
+      </div>
+
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing" id="about">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="img/communicate.png" alt="communicate" width="140" height="140">
+          <h2>I communicate</h2>
+          <p>Being a Marketing major, I've worked in Marketing & Communications ever since I was a freshman. I'm passionate about interacting with people and learning languages. I speak Vietnamese, English and French.</p>
+
+          <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="img/code.png" alt="code" width="140" height="140">
+          <h2>I code</h2>
+          <p>I started to learn coding when I was in a French IT company, working on network system projects, which were pretty foreign to me. With background in marketing/communications and the ability to speak the same language as developers, I feel like I can help them interact with normal people :) and that I can help people solve problems with technology.</p>
+
+          <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="img/learn.png" alt="learn" width="140" height="140">
+
+          <h2>I learn</h2>
+          <p>Learning new things is my habit. One of the reasons why I chose the technology industry is that when you're in tech, you're never gonna know everything. Things change everyday, so it's like a journey of endless exploring, which is really great!</p>
+          <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider" id="wrk">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">My journey to web design. <span class="text-muted">It's been wonderful.</span></h2>
+          <p class="lead">I've got my hands dirty with code since September 2016. You may find some of my recent drafts on <a href="https://codepen.io/tnp1606" target="_blank"><b>CodePen</b></a>.</p><marquee><p>Code is fun! :)</marquee></p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" src="img/1stnoir.jpeg" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">Communications. <span class="text-muted">My passion.</span></h2>
+          <p class="lead">After graduation, I worked as a Communications Volunteer for LIN Center for Community Development on and off. The most remarkable campaign in 2016 was Narrow The Gap. Every year, this fund implements 3 rounds of sponsorship for not-for-profit organizations based in Ho Chi Minh City and nearby regions in diverse fields, with help from professional volunteers and those who work in varied fields, along with financial sponsor from domestic and international donors. 
+          <p>Find out more at <a href="http://linnarrowthegap.org" target="_blank">Narrow The Gap Homepage</a> or <a href="http://linvn.org/" target="_blank">LIN Homepage</a></p>
+</p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" src="img/lin.jpg" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!--<div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>-->
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p id="contact">&copy; 2016 Tran Ngoc Phung &middot; <a href="https://www.linkedin.com/in/tranngocphung">LinkedIn</a> &middot; <a href="mailto:tnp1606@gmail.com?Subject=Hello" target="_top">Drop me a line</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="js/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
 </html>
