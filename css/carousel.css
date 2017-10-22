@@ -1,4 +1,19 @@
+/*=== TNP code here ===*/
+@import url('https://fonts.googleapis.com/css?family=Average|Josefin+Sans');
 
+
+.back-to-top {
+  height: 50px;
+}
+
+.btn-primary {
+  background-color: #000;
+  border: #bcbcbc;
+}
+
+.btn-primary:hover {
+  background-color: #2b2b2b;
+}
 
 
 
@@ -10,9 +25,13 @@ body {
   padding-bottom: 40px;
   color: #5a5a5a;
   background-color: #EEF0EF;
-  font-family: Nirmala UI, Book Antiqua;
+  font-family: Average, Times New Roman;
 }
 
+
+h1, h2, h3 {
+  font-family: Josefin Sans, Arial !important;
+}
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
@@ -153,11 +172,7 @@ body {
   }
 }
 
-h1 {
-  font-family: Book Antiqua; Century Gothic, Nirmala UI;
-}
-
 a:hover {
-  color: #000;
+  color: #2b2b2b;
   text-decoration: none;
 }
