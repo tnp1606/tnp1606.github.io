@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--
+        PPPPPPPPPPP   PPP     PPP   PPPPPPPPPP
+        PPPPPPPPPPP   PPPP    PPP   PPPP  PPPPP
+            PPP       PPPPPP  PPP   PPPP  PPPPP
+            PPP       PPPPPPPPPPP   PPPPPPPPPP
+            PPP       PPP  PPPPPP   PPP 
+            PPP       PPP   PPPPP   PPP 
+            PPP       PPP     PPP   PPP 
+    -->
+
+    <meta name="author" content="Tran Ngoc Phung">
+
+    <meta name="description" content="Tran Ngoc Phung, an explorer in digital marketing, web design and tech. A phoenix learning to fly.">
+    <link rel="icon" href="img/red-heart.png">
+    <link rel="canonical" href="http://tnp1606.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tran Ngoc Phung - Phoenix to fly" />
+    <meta property="og:description" content="Tran Ngoc Phung, an explorer in digital marketing, web design and tech. A phoenix learning to fly." />
+    <meta property="og:url" content="http://tnp1606.github.io/" />
+    <meta property="og:site_name" content="Tran Ngoc Phung" />
+    <meta property="og:image" content="img/cherry-blossom-cover.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="Tran Ngoc Phung, an explorer in digital marketing, web design and tech. A phoenix learning to fly."/>
+    <meta name="twitter:title" content="Tran Ngoc Phung - Phoenix to fly" />
+    <meta name="twitter:image" content="img/cherry-blossom-cover.png" />
+
+    <title>Tran Ngoc Phung - Phoenix to fly</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css'>
+
+      <style>
+      @charset "UTF-8";
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500);
+@keyframes change-text {
+  0%, 55%, 100% {
+    transform: translateY(-45%);
+  }
+  5%, 50% {
+    transform: translateY(-95%);
+  }
+}
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+}
+@keyframes text-blink {
+  50% {
+    border-color: transparent;
+  }
+}
+body {
+  box-sizing: border-box;
+  color: #0d3838;
+  font-family: "Josefin Sans", cwtexyen, sans-serif;
+}
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+  color: #bcbcbc;
+}
+
+a {
+  text-decoration: none;
+  color: #027373;
+}
+a:hover {
+  color: #5aaaaa;
+}
+
+.wrapper {
+  margin: 5% 10%;
+}
+
+.heading {
+  background-color: #f1efed;
+  padding: 5%;
+  text-align: center;
+}
+.heading h1 {
+  margin: 0 auto;
+  font-family: "Source Code Pro", monospace;
+  font-size: 50px;
+  font-weight: 500;
+  animation: 8s typing steps(16, end), 0.5s text-blink step-end infinite;
+  width: 9.6em;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-size: 30px;
+}
+@media screen and (max-width: 550px) {
+  .heading h1 {
+    font-size: 30px;
+  }
+}
+
+.sm-name {
+  display: none;
+  color: #027373;
+}
+@media screen and (max-width: 550px) {
+  .sm-name {
+    display: block;
+  }
+}
+
+.name {
+  margin-top: 10px;
+  height: 52px;
+  overflow: hidden;
+}
+@media screen and (max-width: 550px) {
+  .name {
+    display: none;
+  }
+}
+.name ul {
+  list-style: none;
+  padding: 0;
+  color: #027373;
+  font-size: 50px;
+  animation: 8s change-text linear infinite;
+}
+.name ul li {
+  padding-top: 5px;
+  line-height: 52px;
+}
+
+.social ul {
+  list-style: none;
+  padding-left: 0;
+}
+.social ul a {
+  color: #0d3838;
+}
+.social ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.block h2::first-letter {
+  font-size: 30px;
+  color: #027373;
+}
+.block h2 {
+  font-family: "Source Code Pro", monospace;
+  border-bottom: 2px solid;
+}
+.block ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.info .email::before {
+  content: "thi-ngoc-phung.tran@u-psud.fr";
+}
+
+.research {
+  color: #AD0000;
+}
+
+.pri-tag {
+  display: inline-block;
+  padding: 8px;
+  background: #0d3838;
+  color: #E8F1F2;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.sec-tag {
+  display: inline-block;
+  padding: 8px;
+  background: #E8F1F2;
+  color: #0d3838;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.about p::before {
+  content: "    ";
+}
+
+.degree h3, .exp-item h3 {
+  margin: 13px 0 3px 0;
+  padding: 0;
+}
+.degree p, .exp-item p {
+  margin: 0;
+  padding: 0;
+}
+
+.exp-item ul {
+  list-style: square;
+  padding-left: 15px;
+}
+.exp-item ul li {
+  padding-top: 5px;
+}
+
+.profile {
+  background-size: 100%;
+  border-radius: 50%;
+  margin: 20px auto;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  background-image: url(https://scontent-cdg2-1.cdninstagram.com/vp/d5fcc75520edebb95c99e210247fbf30/5C6E1B08/t51.2885-15/sh0.08/e35/s640x640/39293337_1768446026605629_1152549173891956736_n.jpg);
+}
+
+    </style>
+
+  
+  
+  
+  
+
+</head>
+
+<body translate="no" >
+
+  <section class="heading">
+  <h1>Curriculum Vitae</h1>
+  <div class="profile"></div>
+  <div class="name">
+    <ul>
+      <li>TRAN Ngoc-Phung</li>
+      <li>陳玉鳳 (Chan Yu-Feng)</li>
+    </ul>
+  </div>
+  <h2 class="sm-name">TRAN Ngoc-Phung<br>陳玉鳳 (Chan Yu-Feng)</h2>
+  <div class="social">
+    <ul>
+      <li><a href="https://www.linkedin.com/in/tranngocphung/" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+      <li><a href="https://codepen.io/tnp1606/" target="_blank"><i class="fa fa-codepen fa-2x"></i></a></i>
+      </li>
+    </ul>
+  </div>
+</section>
+<div class="wrapper">
+  <section class="block info">
+    <h2>Personal Information</h2>
+    <ul>
+      <li><i class="fa fa-envelope-o"></i> <span class="email"></span></li>
+      <li><i class="fa fa-paper-plane-o"> </i>  Palaiseau, France</li>
+      <li><i class="fa fa-heart-o"></i> Ho Chi Minh City, Vietnam</li>
+    </ul>
+    <ul>
+      <li class="pri-tag">Vietnamese (Native)</li>
+      <li class="pri-tag">English (IELTS 7.5 - C1)</li>
+      <li class="pri-tag">French (B2)</li>
+      <li class="sec-tag">Chinese - Mandarin (Beginner)</li>
+    </ul>
+  </section>
+  <section class="block edu">
+    <h2>Education</h2>
+    <div class="degree">
+     <h3>Master Innovation, Entreprise, Société <sup>2018 – </sup></h3>
+      Université Paris-Saclay
+    </div>
+    <div class="degree">
+      <h3>Bachelor of Marketing & Business Administration <sup>2012 – 2016 </sup> </h3>
+      <p>University of Economics, Ho Chi Minh City 
+      </p>
+    </div>
+  </section>
+  <section class="block edu">
+    <h2>Academic Achievement</h2>
+    <div class="degree">
+     <h3>GPA: 3.04/4 <sup>2012 – 2016 </sup></h3>
+      4 UEH scholarships for excellent students 
+    </div>
+    <div class="degree">
+      <h3>Digital Marketing Postersession  <sup>2015 </sup> </h3>
+      1st prize – Big Data 
+    </div>
+    <div class="degree">
+      <h3>UEH Excellent Assignment Award  <sup>2014 </sup> </h3>
+      Analysis of some factors affecting the beer industry in Vietnam – opportunities and challenges for enterprises from now until 2020 
+    </div>
+    <div class="degree">
+      <h3>Accomplished online courses</h3>
+      <p>Graphic design Specialization | California Institute of the Arts</p>  
+      <p>Web design Specialization | University of Michigan</p>
+      <p>Introduction to Psychology | University of Toronto</p>
+      <p>Learning how to learn | University of California, San Diego </p>
+      <p>The Data Scientist’s Toolbox | Johns Hopkins University </p>
+      <p>English Composition I | Duke University  </p>
+    </div>
+  </section>
+    <section class="block exp">
+    <h2>Work Experience</h2>
+    <div class="exp-item">
+      <h3>Business Analyst & Frontend Developer, Amagumo Labs <sup>2016 –</sup> </h3>
+      <p>
+        Assessing project scope and business processes of clients </p><p>Translating requirements into software features, Quality Assurance & Quality Control</p><p> User Experience, User Interface design & project management 
+      </p>
+    </div>
+    <div class="exp-item">
+      <h3>Network Operations Center Specialist, IPSIP Group <sup>2016</sup> </h3>
+      <p>Managing and maintaining the monitoring systems for B-process and Mailjet. 
+      </p>
+    </div><div class="exp-item">
+      <h3>Marketing assistant, International Languages and Country Studies Institute, UEH <sup>2015</sup> </h3>
+      <p>In charge of external Communications & the TOEIC Test
+      </p>
+    </div><div class="exp-item">
+      <h3>Other jobs <sup>2010 – 2014</sup> </h3>
+      <p>Field auditor, Nielsen Vietnam, 2014   </p><p>Quality Control Specialist, Marketing Communications Co. Ltd, 2013 </p><p> Sales assistant, Orange Fashion, 2012 </p><p>Sales assistant, ABC Bakery Pham Ngu Lao, 2011</p><p> English interpreter, YAN NEWS, 2010
+      </p>
+    </div>
+    <div class="exp-item">
+      
+    </div>
+  </section>
+
+  <section class="block edu">
+    <h2>Activities & volunteer work</h2>
+    <div class="degree">
+     <h3>Salon « Bienvenue en France! » - l'Ambassade de France au Vietnam <sup>2017</sup></h3>
+      Interpreter for Audencia Business School's representative 
+    </div>
+    <div class="degree">
+     <h3>Narrow the gap Campaign - LIN Center for Community Development <sup>2016</sup></h3>
+      Communications volunteer: 
+      Conducted and ran the campaign Doing good together with more than 1000 people involved.
+    </div>
+    <div class="degree">
+      <h3>Forum « Etudier en France » - l'Union des étudiants vietnamiens en France  <sup>2013 – 2017 </sup></h3>
+      <p>Event Volunteer </p>
+    </div>
+    <div class="degree">
+      <h3>French Club - UEH Student Association <sup>2013-2014 </sup> </h3>
+      <p>Club President: Led a core team of 10 people to host 12 college events and 3 internal training programs. Hosted the first “Fly over Europe’s skies” competition with over 4000 participants. 
+      </p>
+    </div>
+    <div class="degree">
+      <h3>Entrance Exam Support Program (Tiep Suc Mua Thi) - UEH Student Association <sup>2014 </sup> </h3>
+      <p>Communications Volunteer: editing newspapers, writing articles and conducting interviews. 
+      </p>
+    </div>
+    <div class="degree">
+      <h3>Exchange Student Program, Rissho University <sup>2013</sup> </h3>
+      <p>Volunteer: welcoming students from Rissho University (Japan) to Hochiminh City. 
+      </p>
+    </div>
+  </section>
+  <section class="block skills">
+    <h2>Toolbox</h2>
+    <ul>
+      <li class="pri-tag">HTML</li>
+      <li class="pri-tag">CSS</li>
+      <li class="pri-tag">Wordpress</li>
+      <li class="pri-tag">UX</li>
+      <li class="pri-tag">UI</li>
+      <li class="sec-tag">Bootstrap</li>
+      <li class="sec-tag">JavaScript</li>
+      <li class="sec-tag">Photoshop</li>
+      <li class="sec-tag">SAS</li>
+      <li class="sec-tag">Project management</li>
+    </ul>
+  </section>
+  <section class="block skills">
+    <h2>Personal interests</h2>
+    <ul>
+      <li class="pri-tag">Reading</li>
+      <li class="pri-tag">Writing</li>
+      <li class="sec-tag">Drawing</li>
+      <li class="sec-tag">Photography</li>
+      <li class="pri-tag">Psychology</li>
+      <li class="pri-tag">Interaction Design</li>
+      <li class="pri-tag">Digital transformation</li>
+      <li class="pri-tag">Learning new things</li>
+      
+    </ul>
+  </section>
+  <section class="block about">
+    <h2>References</h2>
+    <div class="exp-item">
+    <h3>Mr. Philippe Nguyen</h3>
+    <p>CEO & Founder
+    <a href="http://amagumolabs.com" target="_blank"> @ Amagumo Labs</a></p>
+    </div>
+    <div class="exp-item">
+    <h3>Ms. Tran Ha Quyen</h3>
+    <p>Instructor <a href="http://www.ueh.edu.vn/default_en.aspx" target="_blank">@ School of Economic Mathematics and Statistics, UEH</a></div>
+  </section>
+  <footer>Last Updated: 2018-11. Please contact TRAN Ngoc-Phung for further information.</footer>
+</div>
+  
+  
+
+
+  
+  
+
+  <script src="https://static.codepen.io/assets/editor/live/css_reload-2a5c7ad0fe826f66e054c6020c99c1e1c63210256b6ba07eb41d7a4cb0d0adab.js"></script>
+</body>
+</html>
