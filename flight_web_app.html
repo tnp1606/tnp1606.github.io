@@ -1,0 +1,592 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>CodePen - Dashboard</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+  
+<style>
+/**
+  Variables
+*/
+/* colors */
+/**
+  Styles
+*/
+::-moz-selection {
+  background-color: none;
+}
+::selection {
+  background-color: none;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background: linear-gradient(to right, #0196C0, #07C4CB);
+  display: flex;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.dashboard {
+  background-color: #1B2E58;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.39);
+  height: 600px;
+  overflow: hidden;
+  /* End Styles Header */
+}
+.dashboard header {
+  align-items: center;
+  background-color: #1B2E58;
+  display: flex;
+  font-family: "Amiko", sans-serif;
+  height: 4em;
+  padding: 0.5em 0 0.5em 1.5em;
+}
+.dashboard header .logo {
+  margin-right: 4em;
+}
+.dashboard header .menu {
+  margin-right: auto;
+}
+.dashboard header .menu ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding-top: 0.6em;
+}
+.dashboard header .menu ul li {
+  margin: 0 3em 0 0;
+  padding: 0;
+  display: flex;
+}
+.dashboard header .menu ul li:first-child a, .dashboard header .menu ul li:first-child i {
+  color: #fff;
+}
+.dashboard header .menu ul li:last-child {
+  position: relative;
+}
+.dashboard header .menu ul li:last-child:after {
+  background-color: #FE6881;
+  border-radius: 50%;
+  content: "";
+  height: 12px;
+  left: 52px;
+  position: absolute;
+  top: -4px;
+  width: 12px;
+}
+.dashboard header .menu ul li a {
+  color: #b3b3b3;
+  display: inline-block;
+  outline: none;
+  padding-right: 0.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+.dashboard header .menu ul li i {
+  color: #b3b3b3;
+  font-size: 20px;
+  transition: all 0.2s;
+}
+.dashboard header .menu ul li:hover, .dashboard header .menu ul li > :hover, .dashboard header .menu ul li > :active {
+  cursor: pointer;
+  color: #fff;
+}
+.dashboard header .user-container {
+  box-sizing: border-box;
+}
+.dashboard header .user-container ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.dashboard header .user-container ul li {
+  margin: 0 1em 0 0;
+  padding: 0;
+}
+.dashboard header .user-container ul li.user a {
+  display: block;
+  outline: none;
+}
+.dashboard header .user-container ul li.user a img {
+  border-radius: 50%;
+  height: 42px;
+  vertical-align: middle;
+  width: 42px;
+}
+.dashboard header .user-container ul li.user-dropdown {
+  align-items: center;
+  display: flex;
+}
+.dashboard header .user-container ul li.user-dropdown i {
+  color: #b3b3b3;
+  cursor: pointer;
+  font-size: 20px;
+  padding-top: 0.4em;
+}
+.dashboard .container {
+  background-color: gray;
+  display: flex;
+  height: 38em;
+}
+.dashboard .container .filters-container {
+  background-color: #17294D;
+  flex-basis: 20%;
+}
+.dashboard .container .filters-container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.dashboard .container .filters-container ul li {
+  align-items: center;
+  border-bottom: 1px solid #132344;
+  cursor: pointer;
+  display: flex;
+  padding: 1em 2em 1em 2em;
+}
+.dashboard .container .filters-container ul li.active {
+  padding: 1em 2em 1em 0;
+}
+.dashboard .container .filters-container ul li.active p {
+  border-left: 4px solid #78D6D6;
+  padding-left: 2em;
+}
+.dashboard .container .filters-container ul li:nth-child(1) {
+  align-items: flex-start;
+  cursor: default;
+  flex-direction: column;
+  padding: 1em 2em 1em 2em;
+}
+.dashboard .container .filters-container ul li:nth-child(1) .filters-count {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.dashboard .container .filters-container ul li:nth-child(1) .filters-count span.title-filter {
+  color: #fff;
+  margin-right: auto;
+  text-transform: uppercase;
+}
+.dashboard .container .filters-container ul li:nth-child(1) .filters-count span.count {
+  color: #b3b3b3;
+  margin: 0 1em 0 1.5em;
+}
+.dashboard .container .filters-container ul li:nth-child(1) .filters-count span.count label {
+  color: #01a9ae;
+}
+.dashboard .container .filters-container ul li:nth-child(1) .filters-count button {
+  background-color: #01C2C7;
+  border: none;
+  border-radius: 0.2em;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.8em;
+  line-height: 2;
+  outline: none;
+}
+.dashboard .container .filters-container ul li:nth-child(1) .searcher {
+  margin-top: 1em;
+  display: flex;
+  width: 100%;
+}
+.dashboard .container .filters-container ul li:nth-child(1) .searcher input {
+  background-color: #12213d;
+  border: none;
+  border-radius: 0.4em;
+  box-sizing: border-box;
+  color: #e6e6e6;
+  font-family: "Amiko", sans-serif;
+  outline: none;
+  padding: 0.5em;
+  flex: auto;
+  padding: 0.8em;
+}
+.dashboard .container .filters-container ul li:nth-child(1) .searcher input[placeholder] {
+  color: #999999;
+}
+.dashboard .container .filters-container ul li p {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-right: auto;
+}
+.dashboard .container .filters-container ul li p span.title {
+  color: #bfbfbf;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+.dashboard .container .filters-container ul li p span.info {
+  color: #fff;
+  margin-top: 0.5em;
+  text-transform: capitalize;
+}
+.dashboard .container .filters-container ul li p span.current {
+  color: #01a9ae;
+}
+.dashboard .container .filters-container ul li i {
+  color: #b3b3b3;
+}
+.dashboard .container .filters-container ul li:nth-child(5) p {
+  flex-direction: row;
+}
+.dashboard .container .filters-container ul li:nth-child(5) p .info {
+  text-transform: uppercase;
+  width: 25%;
+  margin-right: 0.4em;
+}
+.dashboard .container .filters-container ul li:nth-child(5) p .state {
+  background-color: #12213d;
+  border: none;
+  border-radius: 0.4em;
+  box-sizing: border-box;
+  color: #e6e6e6;
+  font-family: "Amiko", sans-serif;
+  outline: none;
+  padding: 0.5em;
+  margin-right: 0.4em;
+  width: 30%;
+}
+.dashboard .container .filters-container ul li:nth-child(5) p .length {
+  background-color: #12213d;
+  border: none;
+  border-radius: 0.4em;
+  box-sizing: border-box;
+  color: #e6e6e6;
+  font-family: "Amiko", sans-serif;
+  outline: none;
+  padding: 0.5em;
+  width: 50%;
+}
+.dashboard .container .switch-selector {
+  background-color: #132344;
+  flex-basis: 1%;
+}
+.dashboard .container .switch-selector ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.dashboard .container .switch-selector ul li {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: 0.4em;
+  margin-bottom: 1em;
+}
+.dashboard .container .switch-selector ul li span.head-title {
+  color: #bfbfbf;
+}
+.dashboard .container .switch-selector ul li span {
+  color: #fff;
+  text-transform: uppercase;
+}
+.dashboard .container .switch-selector ul li:nth-child(2) {
+  border-left: 8px solid #FE6881;
+}
+.dashboard .container .switch-selector ul li:nth-child(3), .dashboard .container .switch-selector ul li:nth-child(4), .dashboard .container .switch-selector ul li:nth-child(7), .dashboard .container .switch-selector ul li:nth-child(8) {
+  border-left: 3px solid #755250;
+}
+.dashboard .container .switch-selector ul li:nth-child(5), .dashboard .container .switch-selector ul li:nth-child(6), .dashboard .container .switch-selector ul li:nth-child(9) {
+  border-left: 3px solid #793E5A;
+}
+.dashboard .container .switch-selector ul li:nth-child(10), .dashboard .container .switch-selector ul li:nth-child(11), .dashboard .container .switch-selector ul li:nth-child(12) {
+  border-left: 3px solid #0D5B72;
+}
+.dashboard .container .data-space {
+  background-color: #F8FAF9;
+  flex: 70 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+.dashboard .container .data-space .header {
+  background-color: #fff;
+  box-shadow: 0 0 0.2em lightgray;
+  height: 10%;
+}
+.dashboard .container .data-space .header h2 {
+  color: #33415C;
+  font-weight: 600;
+  font-size: 1.1em;
+  line-height: 2;
+  padding-left: 1.5em;
+  text-transform: uppercase;
+}
+.dashboard .container .data-space .charts-container {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  justify-content: space-around;
+  padding: 1.5em;
+}
+.dashboard .container .data-space .charts-container .status-history {
+  background-color: #fff;
+  box-shadow: 0 0 1px lightgray;
+  height: 20%;
+}
+.dashboard .container .data-space .charts-container .status-history h2 {
+  color: #33415C;
+  font-weight: 600;
+  font-size: 1em;
+  line-height: 2;
+  padding-left: 1.5em;
+  text-transform: uppercase;
+}
+
+
+.dashboard .container .data-space .charts-container .status-history-num {
+  color: #df614a;
+
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 0;
+  padding-left: 1.5em;
+  text-transform: uppercase;
+}
+
+
+.dashboard .container .data-space .charts-container .last-mesurements {
+  background-color: #fff;
+  box-shadow: 0 0 1px lightgray;
+  height: 30%;
+  display: flex;
+  margin-top: 1em;
+  width: 100%;
+  height: 100%;
+}
+</style>
+
+  
+  
+  
+  
+
+</head>
+
+<body translate="no" >
+  <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+  <div class="dashboard">
+    <header>
+      <div class="logo"><img src="https://www.flaticon.com/svg/vstatic/svg/2979/2979504.svg?token=exp=1619967344~hmac=f463a14a88bdb28d3476c9084ebd846a" width="60" height="60"/></div>
+      <div class="menu">
+        <ul>
+          <li><a href="#!">LeBonAvion Delay Prediction Tool</a><i class="icon-down-open"></i></li>
+          <li><a href="#!">Delay policy information</a><i class="icon-down-open"></i></li>
+          <li><a href="#!">Promo</a><i class="icon-down-open"></i></li>
+          <li><a href="#!">alerts</a><i class="icon-down-open"></i></li>
+        </ul>
+      </div>
+      <div class="user-container">
+        <ul>
+          <li class="user"><a href="https://www.universite-paris-saclay.fr/en/education/master/marketing/m2-innovation-marches-et-science-des-donnees#programme" target="_blanck"><img class="avatar" src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/male3-512.png"/></a></li>
+          <li class="user-dropdown"><i class="icon-down-open"></i></li>
+        </ul>
+      </div>
+    </header>
+    <div class="container">
+      <section class="filters-container">
+        <div class="filters">
+          <ul>
+            <li>
+              <div class="filters-count"><span class="title-filter">Flight 1820</span><span class="count">
+                  <!-- <label>100/</label>1973</span> -->
+                <button value="reset">RESET</button>
+              </div>
+              <div class="searcher">
+                <input type="text" placeholder="Add flight code"/>
+              </div>
+            </li>
+            <li class="active">
+              <p><span class="title">From</span><span class="info">SPC</span></p><i class="icon-right-open"></i>
+            </li>
+            <li class="active">
+              <p><span class="title">To</span><span class="info">VIE</span></p><i class="icon-right-open"></i>
+            </li>
+            <li>
+              <p><span class="title">Airline</span><span class="info current">Ne Va Pas Partout</span></p><i class="icon-right-open"></i>
+            </li>
+<!--             <li>
+              <p><span class="info">whsl</span>
+                <select class="state">
+                  <option value="off">off</option>
+                  <option value="on">on</option>
+                </select>
+                <input class="length" placeholder="136.067 mm"/>
+              </p>
+            </li> -->
+            <li>
+              <p><span class="info">flight insurance infomation</span></p><i class="icon-right-open"></i>
+            </li>
+            <li>
+              <p><span class="info">+ book a car at airport</span></p><i class="icon-right-open"></i>
+            </li>
+            <li>
+              <p><span class="info">+ flight schedule at SPC</span></p><i class="icon-right-open"></i>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="switch-selector">
+        <div class="selector">
+          <ul>
+            <li><span class="head-title">your flight</span></li>
+            <li><span>Arrival Delay</span></li>
+            <li><span>Departure Delay</span></li>
+<!--             <li><span>zx2926</span></li>
+            <li><span>zx2927</span></li>
+            <li><span>zx2928</span></li>
+            <li><span>zx2929</span></li>
+            <li><span>zx2930</span></li>
+            <li><span>zx2931</span></li>
+            <li><span>zx2932</span></li>
+            <li><span>zx2933</span></li>
+            <li><span>zx2934</span></li> -->
+          </ul>
+        </div>
+      </section>
+      <main class="data-space">
+        <div class="header">
+          <h2>ARRIVAL DELAY PREDICTION</h2>
+        </div>
+        <div class="charts-container">
+          <div class="status-history">
+            <h2>DELAY POSSIBILITY             </h2>
+          </div>
+          <div class="status-history-num">
+            <h2>90%  </h2>
+          </div>
+          <div class="status-history">
+            <h2>Delay history             </h2>
+          </div>
+          <div class="last-mesurements">
+            <div class="first">
+              <canvas id="myChartA"></canvas>
+            </div>
+           <!--  <div class="second">
+              <canvas id="myChartB"></canvas>
+            </div> -->
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js'></script>
+      <script id="rendered-js" >
+let optsWhsl = {
+  type: 'line',
+  data: {
+    labels: ["April",,, "May",,, "June",,, "July",,, "August",,,],
+    datasets: [
+    {
+      label: 'Ne Va Pas Partout Delay History',
+      fill: false,
+      lineTension: 0.1,
+      backgroundColor: "#32A7EC",
+      borderColor: "#32A7EC",
+      borderJoinStyle: 'miter',
+      pointBorderColor: "rgba(75,192,192,1)",
+      pointBackgroundColor: "#fff",
+      pointBorderWidth: 1,
+      pointHoverRadius: 5,
+      pointHoverBackgroundColor: "rgba(75,192,192,1)",
+      pointHoverBorderColor: "rgba(220,220,220,1)",
+      pointHoverBorderWidth: 2,
+      pointRadius: 1,
+      pointHitRadius: 10,
+      data: [2, 2.1, 3, 2.5, 3, 2.7, 2.8, 2.3, 3, 4.7, 3.9, 4.3, 4.3, 3.7, 3],
+      pointBorderColor: false,
+      spanGaps: false }] },
+
+
+
+  options: {
+    responsive: false,
+    maintainAspectRatio: false,
+    scale: {
+      ticks: {
+        beginAtZero: true } } } };
+
+
+
+
+
+let optsTemp = {
+  type: 'line',
+  data: {
+    labels: ["April",,, "May",,, "June",,, "July",,, "August",,,],
+    datasets: [
+    {
+      label: 'Graphic B',
+      fill: false,
+      lineTension: 0.1,
+      backgroundColor: "#5176E8",
+      borderColor: "#5176E8",
+      borderJoinStyle: 'miter',
+      pointBorderColor: "rgba(75,192,192,1)",
+      pointBackgroundColor: "#fff",
+      pointBorderWidth: 1,
+      pointHoverRadius: 5,
+      pointHoverBackgroundColor: "rgba(75,192,192,1)",
+      pointHoverBorderColor: "rgba(220,220,220,1)",
+      pointHoverBorderWidth: 2,
+      pointRadius: 1,
+      pointHitRadius: 10,
+      data: [3, 3.2, 4, 3.4, 4.2, 2.9, 2.5, 2.8, 2.7, 3, 2.8, 3, 2.8, 3.5, 2.8],
+      pointBorderColor: false,
+      spanGaps: false }] },
+
+
+
+  options: {
+    responsive: false,
+    maintainAspectRatio: false,
+    scale: {
+      ticks: {
+        beginAtZero: true } } } };
+
+
+
+
+
+const ctxA = document.querySelector("#myChartA");
+const ctxB = document.querySelector('#myChartB');
+
+new Chart(ctxA, optsWhsl);
+new Chart(ctxB, optsTemp);
+    </script>
+
+  
+
+</body>
+
+</html>
+ 
